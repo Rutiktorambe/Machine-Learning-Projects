@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Price Prediction</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+        input, select {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 16px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        button {
+            background-color: #28a745;
+            color: #fff;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+        #result {
+            margin-top: 20px;
+            font-size: 18px;
+            font-weight: bold;
+            text-align: center;
+        }
+    </style>
+    <script>
+        async function getPrediction() {
+            const location = document.getElementById('location').value;
+            const sqft = document.getElementById('sqft').value;
+            const bath = document.getElementById('bath').value;
+            const bhk = document.getElementById('bhk').value;
+
+            if (!location || !sqft || !bath || !bhk) {
+                document.getElementById('result').innerText = 'Please fill out all fields.';
+                return;
+            }
+
+            try {
+                const response = await fetch('/predict', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ location, sqft, bath, bhk })
+                });
+
+                const result = await response.json();
+                if (response.ok) {
+                    document.getElementById('result').innerText = `Predicted Price: ₹${result.price}`;
+                } else {
+                    document.getElementById('result').innerText = `Error: ${result.error}`;
+                }
+            } catch (error) {
+                document.getElementById('result').innerText = `Error: ${error.message}`;
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Home Price Prediction</h1>
+    <form onsubmit="event.preventDefault(); getPrediction();">
+        <label for="location">Location:</label>
+        <select id="location" name="location" required>
+            {% for loc in locations %}
+                <option value="{{ loc }}">{{ loc }}</option>
+            {% endfor %}
+        </select>
+
+        <label for="sqft">Total Square Footage:</label>
+        <input type="number" id="sqft" name="sqft" min="0" required>
+
+        <label for="bath">Number of Bathrooms:</label>
+        <select id="bath" name="bath" required>
+            <option value="1">1 Bathroom</option>
+            <option value="2">2 Bathrooms</option>
+            <option value="3">3 Bathrooms</option>
+            <option value="4">4 Bathrooms</option>
+            <option value="5">5 Bathrooms</option>
+            <option value="6">6 Bathrooms</option>
+            <option value="7">7 Bathrooms</option>
+            <option value="8">8 Bathrooms</option>
+        </select>
+
+        <label for="bhk">Number of Bedrooms:</label>
+        <select id="bhk" name="bhk" required>
+            <option value="1">1 BHK</option>
+            <option value="2">2 BHK</option>
+            <option value="3">3 BHK</option>
+            <option value="4">4 BHK</option>
+            <option value="5">5 BHK</option>
+            <option value="6">6 BHK</option>
+            <option value="7">7 BHK</option>
+            <option value="8">8 BHK</option>
+        </select>
+
+        <button type="submit">Predict</button>
+    </form>
+
+    <h2 id="result"></h2>
+</body>
+</html>

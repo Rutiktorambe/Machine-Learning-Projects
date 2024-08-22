@@ -1,0 +1,418 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
+  scrollbar-width: thin;
+  --primary-color: #0c4f60;
+}
+a{
+  text-decoration: none;
+}
+
+section {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+section a {
+  color: #fff;
+}
+
+section:nth-child(1) {
+  justify-content: flex-start;
+  background: linear-gradient(#0004, #0004), url('../static/Background.jpg') no-repeat;
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+section:nth-child(1) .media-icons i {
+  color: var(--primary-color);
+  color: #eee;
+}
+
+#about {
+  background-color: #eee;
+  min-height: 60vh;
+  padding: 7% 10%;
+}
+
+#dataset {
+  padding: 7% 10%;
+  background-color: #ddd;
+}
+
+#dataset h2 {
+  margin-bottom: 30px;
+}
+
+#dataset p {
+  margin-bottom: 40px;
+  padding: 0 10%;
+}
+
+#dataset img {
+  max-height: 85vh;
+}
+
+#dataset div {
+  margin-top: 10px;
+  padding: 0 100px;
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+#dataset div img {
+  width: 100%;
+  max-height: 120px;
+}
+
+.dataset-image {
+  padding: 0 7%;
+}
+
+#about > div,
+#info > div {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 50%;
+}
+
+#about > div img,
+#info > div img {
+  height: 70vh;
+  width: 70%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+#about h2,
+#info h2,
+#dataset h2,
+#performance h2 {
+  text-align: center;
+  color: var(--primary-color);
+  font-size: 50px;
+}
+
+#info > div > img {
+  max-width: 75%;
+  height: 75vh;
+}
+
+.about-content {
+  padding: 0 50px;
+  margin-top: 50px;
+}
+
+header {
+  position: relative;
+  top: 0;
+  width: 100%;
+  padding: 30px 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+label {
+  display: none;
+}
+
+header .logo {
+  display: flex;
+  align-items: center;
+  font-size: 35px;
+  text-decoration: none;
+  font-weight: 800;
+  letter-spacing: 1px;
+  color: #000;
+}
+
+header .logo img {
+  margin-right: 10px;
+}
+
+header .navigation a {
+  font-size: 20px;
+  text-decoration: none;
+  font-weight: 600;
+  letter-spacing: 1px;
+  padding: 2px 15px;
+  border-radius: 20px;
+  transition: 0.3s;
+  transition-property: background;
+  color: #ffffff;
+}
+
+header .navigation a:hover {
+  background: var(--primary-color);
+  color: #fff;
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  padding: 40px 50px;
+  text-align: center;
+}
+
+.content .info h2 {
+  color: #fff;
+  font-size: 80px;
+  text-transform: uppercase;
+  font-weight: 800;
+  letter-spacing: 2px;
+  line-height: 60px;
+  margin-bottom: 30px;
+      text-shadow: #000000 2px 2px, #076d98 2px 2px, #ffff00 3px 3px, #076d98 4px 4px, #076d98 5px 5px, #076d98 6px 6px;
+}
+
+.content .info p {
+  font-size: 20px;
+  text-shadow: 3px 3px 3px  #000;
+  font-weight: 500;
+  margin-bottom: 40px;
+}
+
+.content .info-btn {
+  font-size: 18px;
+  color: #0c4f60;
+  background: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 2px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: 0.3s;
+  transition-property: background;
+  box-shadow: 4px 4px 4px black;
+}
+
+.content .info-btn:hover {
+  background: #0c4f60;
+  color: #fff;
+}
+
+.media-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  margin-bottom: 30px;
+}
+
+.media-icons a {
+  position: relative;
+  color: #111;
+  font-size: 25px;
+  transition: 0.3s;
+  transition-property: transform;
+}
+
+.media-icons a:not(:last-child) {
+  margin-right: 60px;
+}
+
+.media-icons a:hover {
+  transform: scale(1.5);
+}
+
+#check {
+  z-index: 3;
+  display: none;
+}
+
+footer {
+  background-color: #ccc;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  color: #333;
+}
+
+footer p {
+  margin-bottom: 15px;
+}
+
+/* Responsive CSS */
+@media (max-width: 960px) {
+  header .navigation {
+    display: none;
+  }
+
+  label {
+    display: block;
+    font-size: 25px;
+    cursor: pointer;
+    transition: 0.3s;
+    transition-property: color;
+  }
+
+  label:hover {
+    color: #fff;
+  }
+
+  label .close-btn {
+    display: none;
+  }
+
+  #check:checked ~ header .navigation {
+    z-index: 2;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(114, 223, 255, 0.9);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #check:checked ~ header .navigation a {
+    font-weight: 700;
+    margin-right: 0;
+    margin-bottom: 50px;
+    letter-spacing: 2px;
+  }
+
+  #check:checked ~ header label .close-btn {
+    z-index: 2;
+    position: fixed;
+    display: block;
+  }
+
+  #check:checked ~ header label .menu-btn {
+    display: none;
+  }
+
+  label .menu-btn {
+    position: absolute;
+  }
+
+  header .logo {
+    position: absolute;
+    bottom: -6px;
+  }
+
+  .content {
+    margin: 10% 35px;
+  }
+
+  .content  h2 {
+    font-size: 45px;
+    line-height: 50px;
+  }
+
+  .content  h2 span {
+    font-size: 40px;
+    font-weight: 600;
+  }
+
+  .content  p {
+    font-size: 15px;
+  }
+
+  #about {
+    padding: 10% 35px;
+  }
+
+  #about p {
+    font-size: 15px;
+  }
+
+  .about-content {
+    padding: unset;
+  }
+}
+
+@media (max-width: 560px) {
+  .content  h2 {
+    font-size: 35px;
+    line-height: 40px;
+  }
+
+  .content  h2 span {
+    font-size: 30px;
+    font-weight: 600;
+  }
+
+  .content  p {
+    font-size: 14px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+#performance {
+  background-color: #eee;
+  min-height: 60vh;
+  padding: 7% 10%;
+}
+
+
+#performance h2 {
+  margin-bottom: 30px;
+}
+
+#performance p {
+  margin-bottom: 40px;
+  padding: 0 10%;
+}
+
+
+
+.container {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.performance-table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.performance-table th, .performance-table td {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.performance-table th {
+  background-color: #343a40;
+  color: #fff;
+  text-align: left;
+}

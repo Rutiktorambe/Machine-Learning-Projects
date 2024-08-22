@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rainfall Prediction</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='style.css')}}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+  </head>
+  <body>
+    <section>
+      <input type="checkbox" id="check">
+      <header>
+        <h2 class="logo">
+          <img src="{{url_for('static',filename='storm.png')}}" alt="Logo" width="50">
+          <a href="#">Rainfall &nbsp;Prediction</a>
+        </h2>
+        <div class="navigation">
+          <a href="#">Home</a>
+          <a href="#about">About</a>
+          <a href="#dataset">Dataset Info</a>
+          <a href="#performance">Performance</a>
+          <a href="/predict">Predictor</a>
+        </div>
+        <label for="check">
+          <i class="fas fa-bars menu-btn"></i>
+          <i class="fas fa-times close-btn"></i>
+        </label>
+      </header>
+      <div class="content">
+        <div class="info">
+          <h2>Rainfall Predictor</h2>
+          <p>"Wash away the fears and anxieties as the rain washes away the dust and dirt. All can become new again, just like that.”</p>
+          <a href="/predict" class="info-btn">Predict Here</a>
+        </div>
+      </div>
+      <div class="media-icons">
+        <a href="https://www.linkedin.com/in/rutik-torambe-314230228" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/Rutiktorambe" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://twitter.com/Rutik_2502" target="_blank"><i class="fab fa-twitter"></i></a>
+      </div>
+    </section>
+
+
+    <!-- _____________________________________________________________________________________________________________________ -->
+
+
+    <section id="about">
+      <h2>About</h2>
+      <p class="about-content" style="text-align: center;  text-align: justify;
+      text-justify: inter-word;">Rainfall Predictor is a web app which has 
+      a Machine Learning model running at the back. The purpose of developing this app is to 
+      predict whether it will rain the next day or not. This model is based on the Rain Prediction
+      in Australia dataset. More than 80% of Australia has an annual rainfall of less than 
+      600 mm which is less among the all continents other than Antarctica which receives less 
+      rainfall. A place inland near Lake Eyre would only receive 81 mm of rain annually. The 
+      average annual rainfall in the Australian desert is low, ranging from 81 to 250 mm. 
+      Thunderstorms are relatively common in the region, with an annual average of 15 to 20 
+      thunderstorms. The southern parts of Australia get the usual westerly winds and 
+      rain-bearing cold fronts that come when high–pressure systems move towards northern 
+      Australia during winter. Cold snaps may bring frosts inland, though temperatures near the
+      coast are mild or near mild all year round. Summers in southern Australia are generally 
+      dry and hot with coastal sea breezes. During a lengthy dry spell, hot and dry winds from 
+      the interior can cause bushfires in some southern and eastern states, though most commonly
+      Victoria and New South Wales. The tropical areas of northern Australia have a wet summer 
+      because of the monsoon. During "the wet", typically October to April, humid north-westerly
+       winds bring showers and thunderstorms. Occasionally, tropical cyclones can bring heavy 
+       rainfall to tropical coastal regions, which is also likely to reach further inland. 
+      </p>
+    </section>
+
+    <!-- _____________________________________________________________________________________________________________________ -->
+
+
+    <section id="dataset">
+      <h2>About Dataset</h2>
+      <p style=" text-align: justify;
+      text-justify: inter-word;">The "Weather in Australia" dataset available on Kaggle contains historical weather data from 
+        various weather stations across Australia. The dataset comprises daily weather observations 
+        recorded from 2007 to 2017, including variables such as temperature, rainfall, wind speed and 
+        direction, humidity, and air pressure. The dataset contains a total of 1,45,460 records with 24
+         features, including the target variable "RainTomorrow", which indicates whether it rained the 
+         next day or not. This binary variable is used for predicting rainfall using machine learning 
+         models.</p>
+      <img class="dataset-image" src="{{url_for('static',filename='map.jpg')}}" alt="Map of Australia">
+    </section>
+
+      <!-- _____________________________________________________________________________________________________________________ -->
+
+    <section id="performance">
+      <h2>Performance of ML-Models</h2>
+      <p class="about-content" style="text-align: center;  text-align: justify;
+      text-justify: inter-word;">The Cat-Boost Classifier is ranked first in terms of accuracy, 
+        precision, recall, and ROC AUC score. It outperforms other classifiers across all metrics, indicating that it 
+        achieves higher accuracy in predicting rainfall, has a better balance between precision and recall, 
+        and exhibits superior performance in terms of the ROC AUC score, which measures the model's ability to 
+        distinguish between classes. 
+        Therefore, the Cat-Boost Classifier is considered the best model based on the provided metrics because 
+      it consistently achieves the highest scores across all evaluation criteria, indicating superior performance
+       in predicting rainfall compared to other classifiers.
+      </p>
+      <div class="container">
+        <table class="performance-table">
+            <thead>
+                <tr>
+                    <th>Rank</th>
+                    <th>Classifier</th>
+                    <th>Accuracy</th>
+                    <th>Precision</th>
+                    <th>Recall</th>
+                    <th>ROC AUC Score</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Cat-Boost Classifier</td>
+                    <td>0.8563</td>
+                    <td>0.7596</td>
+                    <td>0.5252</td>
+                    <td>0.7386</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Bagging Classifier</td>
+                    <td>0.8540</td>
+                    <td>0.7587</td>
+                    <td>0.5111</td>
+                    <td>0.7321</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Random Forest Classifier</td>
+                    <td>0.8537</td>
+                    <td>0.7704</td>
+                    <td>0.4950</td>
+                    <td>0.7262</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>K-Neighbors Classifier</td>
+                    <td>0.8399</td>
+                    <td>0.7089</td>
+                    <td>0.4850</td>
+                    <td>0.7137</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Ada Boost Classifier</td>
+                    <td>0.8381</td>
+                    <td>0.7152</td>
+                    <td>0.4614</td>
+                    <td>0.7042</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>Linear Discriminant Analysis</td>
+                    <td>0.8366</td>
+                    <td>0.6904</td>
+                    <td>0.4916</td>
+                    <td>0.7140</td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>Logistic Regression Classifier</td>
+                    <td>0.8344</td>
+                    <td>0.7017</td>
+                    <td>0.4542</td>
+                    <td>0.6992</td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td>Decision Tree Classifier</td>
+                    <td>0.8263</td>
+                    <td>0.7304</td>
+                    <td>0.3568</td>
+                    <td>0.6594</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    </section>
+    <footer>
+      <p>Developed with ❤️ by Rutik Torambe.</p> 
+      <div class="media-icons">
+        <a href="https://www.linkedin.com/in/Rutiktorambe" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/Rutiktorambe" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://twitter.com/Rutik_2502" target="_blank"><i class="fab fa-twitter"></i></a>
+      </div>
+    </footer>
+  </body>
+</html>

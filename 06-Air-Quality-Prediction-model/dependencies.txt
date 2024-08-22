@@ -1,0 +1,9 @@
+install the following phyton libraries.
+
+-install pandas
+-install numpy
+-install seaborn
+-install matplotlib
+-install sklearn
+-install Flask
+-install joblib
