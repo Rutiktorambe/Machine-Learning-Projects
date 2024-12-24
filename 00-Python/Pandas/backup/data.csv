@@ -1,0 +1,101 @@
+ID,Name,Age,Department,Join_Date,Hours_Worked,Salary,Performance_Score
+1,Chris Johnson,,Engineering,Invalid Date,,N/A,5
+2,Jane Smith,N/A,Marketing,20-05-2021,58.62317407,N/A,Unknown
+3,John Doe,44,,30-07-2022,N/A,N/A,
+4,Chris Johnson,,Unknown,20-05-2021,N/A,61362,N/A
+5,,,Unknown,,N/A,82771,Unknown
+6,John Doe,,Unknown,Invalid Date,34.60894039,N/A,Unknown
+7,Chris Johnson,N/A,HR,Invalid Date,,N/A,5
+8,John Doe,,Unknown,15-01-2023,N/A,N/A,2
+9,John Doe,45,HR,,,,5
+10,Jane Smith,N/A,Marketing,20-05-2021,,82395,N/A
+11,Michael Brown,N/A,Finance,20-05-2021,,,10
+12,Michael Brown,,Finance,20-05-2021,,68150,N/A
+13,John Doe,N/A,HR,Invalid Date,26.30517047,N/A,Unknown
+14,Chris Johnson,N/A,Engineering,15-01-2023,N/A,N/A,Unknown
+15,Jane Smith,N/A,,20-05-2021,,,
+16,Jane Smith,,Unknown,20-05-2021,,100293,
+17,,N/A,HR,20-05-2021,N/A,80035,3
+18,John Doe,N/A,Unknown,20-05-2021,,86238,6
+19,Jane Smith,,Finance,20-05-2021,N/A,73635,Unknown
+20,John Doe,,Finance,30-07-2022,,,3
+21,Chris Johnson,40,Unknown,,N/A,86827,Unknown
+22,,,Finance,30-07-2022,N/A,50006,
+23,,N/A,Engineering,15-01-2023,,N/A,
+24,Chris Johnson,49,Marketing,Invalid Date,56.66808889,115957,Unknown
+25,Jane Smith,33,Finance,20-05-2021,N/A,,N/A
+26,John Doe,51,Engineering,30-07-2022,,87163,N/A
+27,Emily Davis,51,,,,99154,Unknown
+28,,,,30-07-2022,,,9
+29,Jane Smith,,,30-07-2022,,55334,Unknown
+30,Michael Brown,53,Marketing,30-07-2022,N/A,,
+31,,,HR,20-05-2021,,N/A,
+32,Michael Brown,,Unknown,15-01-2023,N/A,,
+33,Jane Smith,N/A,HR,Invalid Date,N/A,,N/A
+34,John Doe,N/A,Engineering,30-07-2022,N/A,N/A,1
+35,Chris Johnson,N/A,Finance,30-07-2022,N/A,N/A,
+36,John Doe,,Unknown,15-01-2023,36.17277023,97310,10
+37,,55,Finance,30-07-2022,N/A,112675,N/A
+38,Emily Davis,,HR,30-07-2022,28.33974466,,5
+39,,,Marketing,,N/A,N/A,N/A
+40,Chris Johnson,,Marketing,30-07-2022,N/A,N/A,5
+41,John Doe,N/A,,15-01-2023,N/A,,
+42,Jane Smith,N/A,Unknown,30-07-2022,44.01364493,53802,
+43,John Doe,45,Finance,20-05-2021,,32922,1
+44,,N/A,Finance,,,40966,5
+45,Chris Johnson,45,,15-01-2023,37.85288415,,
+46,Emily Davis,N/A,Finance,15-01-2023,,N/A,3
+47,Michael Brown,53,,15-01-2023,N/A,,9
+48,Michael Brown,N/A,,20-05-2021,N/A,N/A,
+49,Emily Davis,58,Marketing,30-07-2022,,N/A,N/A
+50,Emily Davis,,Marketing,15-01-2023,26.61609985,108126,9
+51,John Doe,,Marketing,,,,N/A
+52,John Doe,N/A,Engineering,30-07-2022,N/A,N/A,10
+53,Emily Davis,N/A,,,,51823,N/A
+54,Emily Davis,N/A,Unknown,,N/A,,N/A
+55,Michael Brown,25,Engineering,20-05-2021,N/A,N/A,
+56,Jane Smith,N/A,HR,30-07-2022,29.27092845,83831,
+57,Michael Brown,23,HR,,N/A,,
+58,Emily Davis,N/A,HR,,N/A,N/A,
+59,Michael Brown,N/A,Marketing,15-01-2023,,N/A,Unknown
+60,Emily Davis,34,,Invalid Date,N/A,N/A,
+61,Michael Brown,N/A,Engineering,15-01-2023,46.75922795,,Unknown
+62,Emily Davis,,Engineering,Invalid Date,,,Unknown
+63,Chris Johnson,N/A,Engineering,20-05-2021,25.98245914,,
+64,Emily Davis,29,Engineering,Invalid Date,N/A,,2
+65,John Doe,N/A,,15-01-2023,N/A,75450,10
+66,Jane Smith,,Finance,,48.46502777,N/A,N/A
+67,Michael Brown,N/A,HR,20-05-2021,47.04289044,84721,5
+68,Emily Davis,,Finance,,,85168,N/A
+69,Emily Davis,27,,30-07-2022,,78572,
+70,John Doe,,Finance,,40.91218315,88416,N/A
+71,Michael Brown,N/A,Marketing,,N/A,N/A,Unknown
+72,Michael Brown,23,Finance,,57.80065203,39807,
+73,Michael Brown,,Engineering,15-01-2023,58.39336606,115649,N/A
+74,Jane Smith,,Unknown,,N/A,N/A,Unknown
+75,Michael Brown,,Engineering,30-07-2022,,,
+76,Emily Davis,48,Unknown,30-07-2022,,,Unknown
+77,,,HR,30-07-2022,N/A,N/A,1
+78,,38,HR,20-05-2021,38.25471213,,N/A
+79,,,Engineering,30-07-2022,,N/A,N/A
+80,Jane Smith,53,Marketing,,,81514,
+81,,37,Unknown,Invalid Date,N/A,,N/A
+82,Michael Brown,N/A,Engineering,15-01-2023,N/A,,N/A
+83,John Doe,N/A,Finance,15-01-2023,24.47618327,101820,N/A
+84,Chris Johnson,N/A,Marketing,20-05-2021,42.87406965,,2
+85,Michael Brown,36,Unknown,15-01-2023,N/A,,
+86,Michael Brown,N/A,Finance,15-01-2023,,N/A,N/A
+87,,44,Engineering,Invalid Date,22.21013059,N/A,
+88,,41,Engineering,Invalid Date,N/A,48105,7
+89,Michael Brown,,Finance,30-07-2022,21.49504458,65575,1
+90,,N/A,Marketing,30-07-2022,,N/A,10
+91,John Doe,,Unknown,Invalid Date,N/A,N/A,Unknown
+92,Chris Johnson,38,HR,,,,N/A
+93,John Doe,,Unknown,15-01-2023,45.08201684,,6
+94,,23,HR,30-07-2022,24.75760661,93683,
+95,,N/A,Unknown,Invalid Date,,N/A,10
+96,,,,20-05-2021,,,Unknown
+97,John Doe,,Engineering,,48.43674198,,Unknown
+98,,,HR,,,,Unknown
+99,,N/A,Finance,Invalid Date,N/A,54785,1
+100,,N/A,Unknown,20-05-2021,53.69518626,N/A,
